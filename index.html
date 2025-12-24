@@ -189,8 +189,8 @@
     </div>
 
     <script>
-        let participants = ['영관', '경지', 'DT', '일자', '계보'];
-        let prizes = ['1', '2', '3', '4', '5'];
+        let participants = ['1번', '2번', '3번', '4번', '5번'];
+        let prizes = ['영관', '경지', 'DT', '일자', '계보'];
         let ladderData = [];
         let animating = false;
 
@@ -528,7 +528,7 @@
                     currentCol = segmentProgress < 0.5 ? segment.col1 : segment.col2;
                 }
 
-                segmentProgress += 0.08;
+                segmentProgress += 0.15;
                 if (segmentProgress >= 1) {
                     segmentProgress = 0;
                     segmentIndex++;
@@ -620,8 +620,8 @@
         }
 
         function resetGame() {
-            participants = ['영관', '경지', 'DT', '일자', '계보'];
-            prizes = ['1', '2', '3', '4', '5'];
+            participants = ['1번', '2번', '3번', '4번', '5번'];
+            prizes = ['영관', '경지', 'DT', '일자', '계보'];
             ladderData = [];
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             labelContainer.innerHTML = '';
