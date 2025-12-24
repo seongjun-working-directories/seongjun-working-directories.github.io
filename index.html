@@ -198,6 +198,13 @@
         const ctx = canvas.getContext('2d');
         const labelContainer = document.getElementById('labelContainer');
 
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
         function addParticipant() {
             participants.push('새참가자');
             prizes.push('새결과');
@@ -211,6 +218,10 @@
             }
 
             document.getElementById('result').textContent = '';
+
+            shuffleArray(participants); // ✅ 참가자 순서 랜덤
+            shuffleArray(prizes);       // (선택) 결과도 랜덤으로 하고 싶으면 유지
+
             createLadder();
         }
 
